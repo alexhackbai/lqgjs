@@ -1,0 +1,36 @@
+<include file="../Public/header" />
+<form method="post" action="{:U('China/News/doBusinessEdit')}" enctype="multipart/form-data">
+<input type="hidden" name="id" value="{$businessInfo['id']}" />
+<input type="hidden" name="cover_id" value="{$businessInfo['cover_id']}" />
+<table class="form">
+	<tr>
+		<th>标题：</th><td><input type="text" name="data[title]" class="ipt_s" value="{$businessInfo['title']}" /></td>
+	</tr>
+	<tr>
+		<th>概要：</th><td><textarea name="data[desc]" class="text">{$businessInfo['desc']}</textarea></td>
+	</tr>
+	<tr>
+		<th>封面图片：</th><td><empty name="businessInfo['cover_id']">暂无图片<else /><img src="__ROOT__{$businessInfo['cover']}" height="100" /></empty></td>
+	</tr>
+	<tr>
+		<th>重新上传：</th><td><input type="file" name="cover" /></td>
+	</tr>
+	<tr>
+		<th>内容：</th>
+		<td>
+			<textarea name="data[content]" id="myEditor">{$businessInfo['content']}</textarea>
+			<script type="text/javascript">
+				var editor = UE.getEditor('myEditor',{initialFrameWidth:770, initialFrameHeight:320});
+        	</script>
+		</td>
+	</tr>
+	<tr>
+		<th>&nbsp;</th><td>&nbsp;</td>
+	</tr>
+	<tr>
+		<th>&nbsp;</th><td><input type="submit" value="提交" class="smt_s" /></td>
+	</tr>
+</table>
+</form>
+
+<include file="../Public/footer" />

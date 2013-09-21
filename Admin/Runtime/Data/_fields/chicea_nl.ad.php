@@ -1,0 +1,1 @@
+<?php	return array ( 0 => 'id', 1 => 'type_id', 2 => 'picture_id', 3 => 'name', 4 => 'link', 5 => 'ctime', '_autoinc' => true, '_pk' => 'id', '_type' => array ( 'id' => 'mediumint(8) unsigned', 'type_id' => 'int(8)', 'picture_id' => 'mediumint(8)', 'name' => 'varchar(100)', 'link' => 'varchar(255)', 'ctime' => 'int(10) unsigned', ), );?>

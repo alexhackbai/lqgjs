@@ -1,0 +1,68 @@
+<include file="../Public/header" />
+
+<div class="logo_nav clearfix">
+	<div class="logo fl"><a href="{:U('China/Index/index')}"><img src="__ROOT__/Public/Home/China/Img/logo.png" /></a></div>
+    <div class="nav fr">
+    	<ul class="clearfix">
+        	<li><a href="{:U('China/Index/index')}">首页</a></li>
+            <li><a href="{:U('China/About/index')}" class="current">关于我们</a></li>
+            <li><a href="{:U('China/News/index')}">奇嘉动态</a></li>
+            <li><a href="{:U('China/Case/index')}">案例展示</a></li>
+            <li><a href="{:U('China/Service/index')}">品牌服务</a></li>
+            <li><a href="{:U('China/Contact/index')}">联系方式</a></li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div class="sub_banner">
+	<div class="sub_banner_box clearfix">
+    	<div class="fl inline mt30">
+        	<h3 class="cn">关于我们</h3>
+            <h3 class="en">About Us</h3>
+        </div>
+        <p class="fr">我们坚信敏锐的洞察与创新设计创造商机、未来！</p>
+    </div>
+</div>
+
+<div class="main clearfix pt20">
+	<div class="detail fl">
+    	<h3 class="tit">关于我们</h3>
+		<h4 class="tit pt30">{$detailInfo.title}</h4>
+		<p class="alg-cen">发布时间：{$detailInfo.ctime|date='Y-m-d H:i:s', ###}&nbsp;&nbsp;浏览数：{$detailInfo.views} 次</p>
+		<p class="desc">{$detailInfo.desc}</p>
+        <div class="con">{$detailInfo.content}</div>
+    </div>
+    <div class="side_right fr">
+    	<h3 class="tit">关于我们</h3>
+        <ul class="related">
+			<volist name="hotNews" id="vo">
+        	<li><a href="{$vo['link']}">{$vo.title}</a></li>
+			</volist>
+        </ul>
+        <h3 class="tit mt30">联系我们</h3>
+        <table>
+        	<tr>
+            	<th width="53">地&nbsp;&nbsp;址：<br />&nbsp;</th><td>{$siteInfo.site_address}</td>
+            </tr>
+            <tr>
+                <th>邮&nbsp;&nbsp;编：</th><td>{$siteInfo.site_code}</td>
+            </tr>
+            <tr>
+                <th>电&nbsp;&nbsp;话：</th><td>{$siteInfo.site_tel}</td>
+            </tr>
+            <tr>
+                <th>邮&nbsp;&nbsp;箱：</th><td>{$siteInfo.site_mail}</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th width="63">技术支持：</th><td>{$siteInfo.site_help}</td>
+            </tr>
+        </table>
+        <div class="map mt30"><img src="__ROOT__{$adMap['picture']}" /></div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<include file="../Public/footer" />

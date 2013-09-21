@@ -1,0 +1,19 @@
+<include file="../Public/header" />
+<form method="post" action="{:U('English/Home/doUpwd')}" enctype="multipart/form-data">
+<table class="form">
+	<tr>
+		<td colspan="2"><span style="color:#FF0000">网站管理员信息修改后，请务必牢记！</span></td>
+	</tr>
+	<tr>
+		<th>网站管理员：</th><td><input type="text" name="uname" class="ipt_s" value="{$info['uname']}" /></td>
+	</tr>
+	<tr>
+		<th>管理员密码：</th><td><input type="password" name="upwd" class="ipt_m" /></td>
+	</tr>
+	<tr>
+		<th>&nbsp;</th><td><input type="submit" value="提交" class="smt_s" /></td>
+	</tr>
+</table>
+</form>
+
+<include file="../Public/footer" />

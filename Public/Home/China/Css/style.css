@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+/* header start */
+.header{ padding: 10px 0;}
+.warp{ width:980px; margin: 0 auto;}
+.languageTools{ padding-bottom: 5px;}
+.languageTools a{ float: right; margin-left: 6px;}
+.horizontalNavPane a{ float: left; padding-right: 25px; height: 35px; line-height: 35px;}
+.horizontalNavPane{ margin-top: 30px; }
+.search{}
+.search input.searchTxt{ border: none;background: #fbfbfb; border: 1px solid #dee2e0; border-radius: 4px; height: 33px;line-height: 33px; margin-right: 0; width: 240px; padding: 0 6px;}
+.search input.searchBut{ margin-left:-46px; *margin-left: -62px; height: 33px;line-height: 33px; background: #e6eae7; border: none; border-left: 1px solid #dee2e0; padding: 0 10px; cursor: pointer;}
+.search input.searchBut:hover{ background: #7fadd8;}
+/* header end */
+
+/* indexContentPane start */
+.indexContentPane{ border: 1px solid #e4e7e5; background: #f4faf5; padding: 15px 0; border-left: 0; border-right: 0;}
+.leftNav{ width:260px;}
+.leftNav ul li{ margin-bottom: 6px;}
+.leftNav ul li a{ background: #e4e7e5; padding:0 10px; display: block; text-decoration: none; height: 34px; line-height: 34px;}
+.leftNav ul li a:hover{ background: #b7d1ea;}
+.leftNav ul li ul{ background: #eff4f0; margin-top: 4px; display: none;}
+.leftNav ul li ul li{ margin-bottom: 2px;}
+.leftNav ul li ul li a{ background: #eff4f0; height: 28px; line-height: 28px;}
+.leftNav ul li ul li a:hover{ background: #b9d3e6;}
+.rightContentPane{ width:710px;}
+/* indexContentPane end */
+
+/* focus start */
+#abgneBlock {
+    width: 710px;
+    height: 256px;
+    position: relative;margin:0 auto;margin-bottom:10px;
+    overflow: hidden;
+    border: 0px solid #ccc;
+}
+#abgneBlock ul.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    width: 9999px;
+    height: 100%;
+}
+#abgneBlock ul.list li {
+    float: left;
+    width: 710px;
+    height: 100%;
+}
+#abgneBlock .list img{
+    width: 100%;margin:0px;
+    height: 100%;
+    border: 0;
+}
+#abgneBlock ul.playerControl {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    bottom:28px;
+    right: 14px;
+    height: 14px;
+}
+#abgneBlock ul.playerControl li {
+    float: left;
+    cursor: pointer;
+    margin: 0px 2px;
+    padding: 3px 8px 2px;
+    background: #423c3c;
+    color: #fff;
+}
+#abgneBlock ul.playerControl li.current {
+    background:#05883d;
+}
+/* focus end */
+.rightBotPane{ padding: 20px;}
+.rightBotPane h2{ font-size: 24px; color: #504f4e; line-height: 40px; margin-bottom: 15px;}
+.rightBotPane p{ color: #898988; font-size: 14px; margin-bottom: 8px;}
+
+/* footer start */
+.footer{ padding: 10px 0; font-size: 12px;}
+.footer-sociality-share{ padding-left: 10px;}
+.footer-sociality-share a{ width:24px; height: 24px; display: block; float: left; text-indent: -99999px; margin-right: 6px;}
+.footer-sociality-share a.facebook{background: url("../images/f.jpg") no-repeat 0 0;}
+.footer-sociality-share a.twitter{background: url("../images/t.jpg") no-repeat 0 0;}
+.footer-sociality-share a.youtube{background: url("../images/y.jpg") no-repeat 0 0;}
+.footer-sociality-share a.sns-in{background: url("../images/l.jpg") no-repeat 0 0;}
+.footer-sociality-share a:hover{ opacity: 0.7;}
+.footerLeftText{ line-height: 24px;}
+/* footer end */
+
+/* breadCrumb start */
+.breadCrumb{ border-bottom: 1px dotted #ccc; line-height: 32px; font-size: 10px; padding-left: 8px; padding-top: 10px;}
+.breadCrumb a{ padding:0 5px;}
+/* breadCrumb end */
+
+/* lister */
+.lister { clear:both; border-top:1px solid #d2d2d2; padding:10px;}
+.lister ul { margin:0; padding:0; list-style:none;}
+.lister ul li { background:url(../images/lister.gif) no-repeat; float:left; width:24px; height:23px; margin:1px; text-align:center;}
+.lister ul li a { color:#7d7d7d;}
+.lister ul li a:hover { text-decoration:underline;}
+.lister ul li a.active { font-weight:bold;}
+
+/********** contact form **********/
+#contactform { margin:0; padding:5px 10px;}
+#contactform * { color:#5f5f5f;}
+#contactform ol { margin:0; padding:0; list-style:none;}
+#contactform li { margin:0; padding:0; background:none; border:none; display:block;}
+#contactform li.buttons { margin:5px 0 5px 0;}
+#contactform label { margin:0; width:110px; display:block; padding:3px 0; font:bold 12px Arial, Helvetica, sans-serif; color:#5f5f5f; text-transform:capitalize;}
+#contactform label span { display:block; font:normal 10px Arial, Helvetica, sans-serif;}
+#contactform input.text { width:540px; border:1px solid #d0d0d0; margin:3px 0; padding:5px 2px; height:16px; background:#ffffff;}
+#contactform textarea { width:540px; border:1px solid #d0d0d0; margin:3px 0; padding:2px; background:#ffffff;}
+p.response { text-align:center; color:red; font:bold 11px Arial, Helvetica, sans-serif; line-height:1.8em; width:auto;}
+#imageField2{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    background-image: -moz-linear-gradient(top,#fff,#e6e6e6);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top,#fff,#e6e6e6);
+    background-image: -o-linear-gradient(top,#fff,#e6e6e6);
+    background-image: linear-gradient(to bottom,#fff,#e6e6e6);
+    background-repeat: repeat-x;
+    border: 1px solid #ccc;
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    border-bottom-color: #b3b3b3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe6e6e6',GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+}
+#imageField2:hover{
+    color:#333;background-color:#e6e6e6;*background-color:#d9d9d9
+}

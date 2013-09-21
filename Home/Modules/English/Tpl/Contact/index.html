@@ -1,0 +1,53 @@
+<include file="../Public/header" />
+
+<div class="logo_nav clearfix">
+	<div class="logo_nav_box">
+    	<div class="logo fl"><a href="{:U('English/Index/index')}"><img src="__ROOT__/Public/Home/English/Img/logo.png" /></a></div>
+    	<div class="nav fr">
+    		<ul class="clearfix">
+        		<li><a href="{:U('English/Index/index')}">Home</a></li>
+            	<li><a href="{:U('English/About/index')}">About Us</a></li>
+            	<li><a href="{:U('English/News/index')}">News</a></li>
+            	<li><a href="{:U('English/Case/index')}">Cases</a></li>
+            	<li><a href="{:U('English/Service/index')}">Services</a></li>
+            	<li><a href="{:U('English/Contact/index')}" class="current">Contact Us</a></li>
+        	</ul>
+    	</div>
+    <div class="clear"></div>
+    </div>
+</div>
+
+<div class="sub_banner">
+	<h2>OUR <span style="color:#ff6700">CONTACT</span></h2>
+</div>
+
+<div class="main pt40"><img src="__ROOT__{$contactMap['picture']}" width="940" /></div>
+
+<div class="main clearfix">
+    <div class="w460 fl inline mt30">
+        <h3 class="tit pt15 pb10">Messages</h3>
+        <ul class="message pt20">
+			<form method="post" action="{:U('English/Contact/message')}">
+            <li><input type="text" name="name" class="ipt_m" value="Your name ..." onblur="if(value==''){value='Your name ...'} else {check_login_input(this);} " onfocus="if(value=='Your name ...'){value=''} else {this.select()}" /></li>
+            <li><input type="text" name="mail" class="ipt_m" value="Your mail ..." onblur="if(value==''){value='Your mail ...'} else {check_login_input(this);} " onfocus="if(value=='Your mail ...'){value=''} else {this.select()}" /></li>
+            <li><textarea name="content">Your message ...</textarea></li>
+            <li><input type="submit" class="smt_m" value="SEND MESSAGE" /></li>
+			</form>
+        </ul>
+    </div>
+    <div class="w460 fr inline mt30">
+        <h3 class="tit pt15 pb10">Related Information</h3>
+        <ul class="us_info pt20">
+            <li><h5>Contact {$siteInfo.site_name}</h5></li>
+            <li class="mt20">{$aboutInfo.desc}</li>
+            <li class="mt20">Address:&nbsp;{$siteInfo.site_address}</li>
+            <li>Tel:&nbsp;{$siteInfo.site_tel}</li>
+            <li>Fax:&nbsp;{$siteInfo.site_fax}</li>
+            <li>E-mail:&nbsp;<span>{$siteInfo.site_mail}</span></li>
+            <li>Web:&nbsp;<span><a href="http://{$siteInfo['site_web']}" target="_blank">{$siteInfo.site_web}</a></span></li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<include file="../Public/footer" />

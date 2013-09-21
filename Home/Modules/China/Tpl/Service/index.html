@@ -1,0 +1,49 @@
+<include file="../Public/header" />
+
+<div class="logo_nav clearfix">
+	<div class="logo fl"><a href="{:U('China/Index/index')}"><img src="__ROOT__/Public/Home/China/Img/logo.png" /></a></div>
+    <div class="nav fr">
+    	<ul class="clearfix">
+        	<li><a href="{:U('China/Index/index')}">首页</a></li>
+            <li><a href="{:U('China/About/index')}">关于我们</a></li>
+            <li><a href="{:U('China/News/index')}">奇嘉动态</a></li>
+            <li><a href="{:U('China/Case/index')}" class="current">案例展示</a></li>
+            <li><a href="{:U('China/Service/index')}">品牌服务</a></li>
+            <li><a href="{:U('China/Contact/index')}">联系方式</a></li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div class="sub_banner">
+	<div class="sub_banner_box clearfix">
+    	<div class="fl inline mt30">
+        	<h3 class="cn">案例展示</h3>
+            <h3 class="en">Case Show</h3>
+        </div>
+        <p class="fr">我们坚信敏锐的洞察与创新设计创造商机、未来！</p>
+    </div>
+</div>
+
+<div class="main clearfix pt20">
+	<div class="case_tit clearfix">
+    	<h3 class="tit fl">案例展示</h3>
+        <div class="name fr"><volist name="serPro" id="vo"><a href="{:U('China/Case/index', array('service'=>$vo['id']))}">{$vo.pro_name}</a></volist></div>
+        <div class="clear"></div>
+    </div>
+    <div class="case_ls mt35">
+    	<ul class="clearfix">
+			<volist name="caseInfo" id="vo">
+        	<li>
+            	<a href="{$vo['link']}"><img src="__ROOT__{$vo['cover']}" /></a>
+            	<h4><a href="{$vo['link']}">{$vo.name}</a></h4>
+                <p><a href="{$vo['link']}">{$vo.desc}</a></p>
+            </li>
+			</volist>
+            <div class="clear"></div>
+        </ul>
+    </div>
+	<div class="page">{$page}</div>
+</div>
+
+<include file="../Public/footer" />

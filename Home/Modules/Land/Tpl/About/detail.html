@@ -1,0 +1,63 @@
+<include file="../Public/header" />
+
+<div class="logo_nav clearfix">
+	<div class="logo_nav_box">
+    	<div class="logo fl"><a href="{:U('Land/Index/index')}"><img src="__ROOT__/Public/Home/English/Img/logo.png" /></a></div>
+    	<div class="nav fr">
+    		<ul class="clearfix">
+        		<li><a href="{:U('Land/Index/index')}">Home</a></li>
+            	<li><a href="{:U('Land/About/index')}" class="current">About Us</a></li>
+            	<li><a href="{:U('Land/News/index')}">News</a></li>
+            	<li><a href="{:U('Land/Case/index')}">Cases</a></li>
+            	<li><a href="{:U('Land/Service/index')}">Services</a></li>
+            	<li><a href="{:U('Land/Contact/index')}">Contact Us</a></li>
+        	</ul>
+    	</div>
+    <div class="clear"></div>
+    </div>
+</div>
+
+<div class="sub_banner">
+	<h2>ABOUT <span style="color:#ff6700">CHICEA</span></h2>
+</div>
+
+<div class="main clearfix">
+	<div class="detail fl">
+    	<h4 class="tit"><span class="views">{$detailInfo.views} NO.</span><span class="time">{$detailInfo.ctime|date='d/m/Y', ###}</span>{$detailInfo.title}</h4>
+		<div class="indent20 mt40 pr30 pl30">{$detailInfo.desc}</div>
+		<div class="mt30 pr30 pl30">{$detailInfo.content}</div>
+    </div>
+    <div class="side_right fr">
+    	<h3 class="tit mt15 pb10">SEARCH</h3>
+        <div class="search_s mt10">
+			<form method="post" action="{:U('Land/Search/searchCase')}" enctype="multipart/form-data">
+				<input type="text" name="name" class="ipt_s" /><input type="submit" value="&nbsp;" class="smt_s" />
+			</form>
+		</div>
+        <h3 class="tit mt35 pb10">SERVICES</h3>
+        <ul class="ser_d">
+			<volist name="serName" id="vo">
+            <li><a href="{$vo['link']}">{$vo.pro_name}</a></li>
+			</volist>
+        </ul>
+        <h3 class="tit mt35 pb10">Related Information</h3>
+        <table class="info">
+        	<tr>
+            	<th style="vertical-align:top;">ADD:</th><td>{$siteInfo.site_address}</td>
+            </tr>
+            <tr>
+            	<th>Tel:</th><td>{$siteInfo.site_tel}</td>
+            </tr>
+            <tr>
+            	<th>Mail:</th><td>{$siteInfo.site_mail}</td>
+            </tr>
+            <tr>
+            	<th>Fax:</th><td>{$siteInfo.site_fax}</td>
+            </tr>
+        </table>
+        <div class="adMap mt35"><img src="__ROOT__{$adMap['picture']}" /></div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<include file="../Public/footer" />

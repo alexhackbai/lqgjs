@@ -1,0 +1,45 @@
+<include file="../Public/header" />
+<form method="post" action="{:U('Land/Case/doFourEdit')}" enctype="multipart/form-data">
+<input type="hidden" name="id" value="{$fourInfo['id']}" />
+<input type="hidden" name="cover_id" value="{$fourInfo['cover_id']}" />
+<table class="form">
+	<tr>
+		<th>案例名称：</th><td><input type="text" name="data[name]" class="ipt_s" value="{$fourInfo['name']}" /></td>
+	</tr>
+	<tr>
+		<th>案例描述：</th><td><textarea name="data[desc]" class="text">{$fourInfo['desc']}</textarea></td>
+	</tr>
+	<tr>
+		<th>封面图片：</th><td><empty name="fourInfo['cover_id']">暂无图片<else /><img src="__ROOT__{$fourInfo['cover']}" height="100" /></empty></td>
+	</tr>
+	<tr>
+		<th>重新上传：</th><td><input type="file" name="cover" /></td>
+	</tr>
+	<tr>
+		<th>案例内容：</th>
+		<td>
+			<textarea name="data[content]" id="myEditor">{$fourInfo['content']}</textarea>
+			<script type="text/javascript">
+				var editor = UE.getEditor('myEditor',{initialFrameWidth:770, initialFrameHeight:320});
+        	</script>
+		</td>
+	</tr>
+	<tr>
+		<th>是否首页：</th>
+		<td>
+			<input type="text" name="data[status]" class="ipt_s" id="w20" value="{$fourInfo['status']}" />
+			<span style="color:#FF0000;">* 只有为1的时候才在首页显示</span>
+		</td>
+	</tr>
+	<tr>
+		<th>&nbsp;</th><td>&nbsp;</td>
+	</tr>
+	<tr>
+		<th>&nbsp;</th><td><input type="submit" value="提交" class="smt_s" /></td>
+	</tr>
+</table>
+</form>
+<style type="text/css">
+#w20{ width:20px;}
+</style>
+<include file="../Public/footer" />

@@ -1,0 +1,61 @@
+<include file="../Public/header" />
+
+<div class="logo_nav clearfix">
+	<div class="logo_nav_box">
+    	<div class="logo fl"><a href="{:U('Land/Index/index')}"><img src="__ROOT__/Public/Home/English/Img/logo.png" /></a></div>
+    	<div class="nav fr">
+    		<ul class="clearfix">
+        		<li><a href="{:U('Land/Index/index')}">Home</a></li>
+            	<li><a href="{:U('Land/About/index')}" class="current">About Us</a></li>
+            	<li><a href="{:U('Land/News/index')}">News</a></li>
+            	<li><a href="{:U('Land/Case/index')}">Cases</a></li>
+            	<li><a href="{:U('Land/Service/index')}">Services</a></li>
+            	<li><a href="{:U('Land/Contact/index')}">Contact Us</a></li>
+        	</ul>
+    	</div>
+    <div class="clear"></div>
+    </div>
+</div>
+
+<div class="sub_banner">
+	<h2>ABOUT <span style="color:#ff6700">CHICEA</span></h2>
+</div>
+
+<div class="main clearfix">
+    <div class="w460 fl inline mt30">
+        <h3 class="tit pt15 pb10">WHO WE ARE ?</h3>
+        <p class="mt30">{$aboutInfo.desc}</p>
+    </div>
+    <div class="w460 fr inline mt30">
+        <h3 class="tit pt15 pb10">OUR SERVICES</h3>
+        <div class="our_pro">
+            <ul class="clearfix pt25">
+				<volist name="bandsInfo" id="vo">
+                <li class="clearfix">
+                    <div class="ic fl">{$vo.id}</div>
+                    <div class="info fr">
+                        <p><a href="{$vo['link']}">{$vo.home}</a></p>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+				</volist>
+                <div class="clear"></div>
+            </ul>
+        </div>        
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div class="main clearfix pt20">
+	<h3 class="tit pt15 pb10">OUR TEAMS</h3>
+    <div class="our_team pt30">
+    	<ul class="clearfix">
+			<volist name="teamInfo" id="vo">
+        	<li><a href="{$vo['link']}"><img src="__ROOT__{$vo['cover']}" width="220" height="175" /></a></li>
+			</volist>
+			<div class="clear"></div>
+        </ul>
+    </div>
+</div>
+
+<include file="../Public/footer" />

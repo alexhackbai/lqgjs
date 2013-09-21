@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+body{ padding:20px 15px 20px 30px;}
+h3{ height:18px; font-size:14px; font-weight:bold; line-height:18px; padding:15px 0;}
+a.btn_s{ background:url(../Img/btn_w.gif) no-repeat; width:60px; height:16px; display:inline-block; font-size:12px; color:#3b5999; text-align:center; line-height:16px; padding:4px 0;}
+
+table.form{ width:100%;}
+table.form tr th{ width:120px; font-weight:normal; text-align:right;}
+table.form tr th, table.form tr td{ padding:5px;}
+
+table.ls{ width:100%; border:#dedede 1px solid; text-align:left;}
+table.ls tr th{ background:#dee4ed;}
+table.ls tr th, table.ls tr td{ padding:5px; border:#dedede 1px solid;}
+
+.page{ font-size:14px; text-align:right; padding-right:30px;}
+.page a{ color:#FF0000; padding:5px 0;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

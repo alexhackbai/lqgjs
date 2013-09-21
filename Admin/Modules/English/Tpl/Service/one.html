@@ -1,0 +1,38 @@
+<include file="../Public/header" />
+<form method="post" action="{:U('English/Service/doOne')}" enctype="multipart/form-data">
+<table class="form">
+	<tr>
+		<th>服务名称：</th><td><input type="text" name="data[pro_name]" value="{$info['pro_name']}" class="ipt_s" /></td>
+	</tr>
+	<tr>
+		<th>服务描述：</th><td><textarea name="data[desc]" class="text">{$info.desc}</textarea></td>
+	</tr>
+	<tr>
+		<th>首页描述：</th><td><textarea name="data[home]" class="text">{$info.home}</textarea></td>
+	</tr>
+	<tr>
+		<th>封面图片：</th>
+		<td><empty name="info['cover_id']">暂无封面<else /><img src="__ROOT__{$info['cover']}" height="100" /></empty></td>
+	</tr>
+	<tr>
+		<th>重新上传：</th><td><input type="file" name="cover" /></td>
+	</tr>
+	<tr>
+		<th>服务内容：</th>
+		<td>
+			<textarea name="data[content]" id="myEditor">{$info.content}</textarea>
+			<script type="text/javascript">
+				var editor = UE.getEditor('myEditor',{initialFrameWidth:770, initialFrameHeight:320});
+        	</script>
+		</td>
+	</tr>
+	<tr>
+		<th>&nbsp;</th><td>&nbsp;</td>
+	</tr>
+	<tr>
+		<th>&nbsp;</th><td><input type="submit" value="提交" class="smt_s" /></td>
+	</tr>
+</table>
+</form>
+
+<include file="../Public/footer" />

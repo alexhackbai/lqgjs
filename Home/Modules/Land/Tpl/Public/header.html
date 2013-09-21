@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<empty name="_SEO">
+<title>{$siteInfo.site_title}-{$siteInfo.site_name}</title>
+<meta name="keywords" content="{$siteInfo.site_kwd}" />
+<meta name="description" content="{$siteInfo.site_desc}" />
+<else />
+<title>{$_SEO.title}</title>
+<meta name="keywords" content="{$_SEO.kwd}" />
+<meta name="description" content="{$_SEO.desc}" />
+</empty>
+<link href="__ROOT__/Public/Home/English/Css/basic.css" type="text/css" rel="stylesheet" />
+<link href="__ROOT__/Public/Home/English/Css/style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<div style="background:#0e6592; width:100%; height:5px;"></div>
+
+<div  class="top">
+	<div class="top_box clearfix">
+    	<div class="vl fl"><img src="__ROOT__/Public/Home/English/Img/email.gif" />&nbsp;&nbsp;{$siteInfo.site_mail}&nbsp;&nbsp;&nbsp;<img src="__ROOT__/Public/Home/English/Img/tel_top.gif" />&nbsp;&nbsp;{$siteInfo.site_tel}</div>
+        <div class="vl fr">
+			&nbsp;&nbsp;&nbsp;&nbsp;<a href="{:U('China/Index/index')}"><img src="__ROOT__/Public/Home/English/Img/china.gif" /></a>
+			&nbsp;&nbsp;&nbsp;&nbsp;<a href="{:U('English/Index/index')}"><img src="__ROOT__/Public/Home/English/Img/english.gif" /></a>
+			&nbsp;&nbsp;&nbsp;&nbsp;<a href="{:U('Land/Index/index')}"><img src="__ROOT__/Public/Home/English/Img/land.gif" /></a>
+		</div>
+        <div class="search fr">
+			<form method="post" action="{:U('Land/Search/result')}" enctype="multipart/form-data">
+				<input type="text" name="search" class="ipt" /><input type="submit" name="submit" value="&nbsp;" class="smt" />
+			</form>
+		</div>
+        <div class="vl fr"><img src="__ROOT__/Public/Home/English/Img/i1.gif" />&nbsp;<img src="__ROOT__/Public/Home/English/Img/i2.gif" />&nbsp;<img src="__ROOT__/Public/Home/English/Img/i3.gif" />&nbsp;<img src="__ROOT__/Public/Home/English/Img/i4.gif" />&nbsp;<img src="__ROOT__/Public/Home/English/Img/i5.gif" />&nbsp;<img src="__ROOT__/Public/Home/English/Img/i6.gif" />&nbsp;&nbsp;&nbsp;</div>
+        <div class="clear"></div>
+    </div>
+</div>

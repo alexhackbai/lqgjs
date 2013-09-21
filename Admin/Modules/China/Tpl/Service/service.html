@@ -1,0 +1,32 @@
+<include file="../Public/header" />
+
+<h3>服务管理</h3>
+
+<table class="ls">
+    <tr>
+        <td colspan="5"><a href="{:U('China/Service/serviceAdd')}" class="btn_s">添加</a></td>
+    </tr>
+    <tr>
+        <th width="5%">id</th>
+        <th width="20%">服务名称</th>
+        <th width="50%">首页描述</th>
+        <th width="15%">服务描述</th>
+        <th width="10%">操作</th>
+    </tr>
+    <volist name="serviceInfo" id="vo">
+	<tr>
+		<td>{$vo.id}</td>
+        <td>{$vo.pro_name}</td>
+        <td>{$vo.home}</td>
+        <td>{$vo.desc}</td>
+		<td>
+			<a href="{:U('China/Service/serviceEdit', array('id'=>$vo['id']))}">编辑</a>&nbsp;
+			<a href="{:U('China/Service/delService', array('id'=>$vo['id']))}">删除</a>
+		</td>
+	</tr>
+	</volist>
+</table>
+
+<div class="page mt20">{$page}</div>
+
+<include file="../Public/footer" />

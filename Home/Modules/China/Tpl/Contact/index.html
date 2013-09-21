@@ -1,0 +1,84 @@
+<include file="../Public/header" />
+
+<div class="indexContentPane">
+    <div class="warp clearfix">
+        <div class="leftNav left">
+           <ul>
+                <li><a href="{:U('China/About/index')}">关于我们</a></li>
+                <li><a href="{:U('China/SocialResponsibility/index')}">企业社会责任</a></li>
+                <li>
+                    <a href="#">服务</a>
+                    <ul>
+                          <volist name="serviceInfo" id="vo">
+                            <li>
+                                <a href="{$vo['link']}">{$vo.pro_name}</a>
+                            </li>
+                            </volist>
+                    </ul>
+                </li>
+                <li><a href="#">产品</a>
+                    <ul>
+                    <volist name="caseInfo" id="vo">
+                    <li>
+                        <a href="{$vo['link']}">{$vo.name}</a>
+                    </li>
+                    </volist>
+                </ul>
+                </li>
+                <li>
+                    <a href="#">项目</a>
+                    <ul>
+                         <volist name="projectInfo" id="vo">
+                            <li>
+                                <a href="{$vo['link']}">{$vo.name}</a>
+                            </li>
+                            </volist>
+                    </ul>
+                </li>
+           </ul>
+        </div>
+        <div class="rightContentPane right">
+            <img src="__ROOT__/Public/Home/China/images/subFoc.jpg" />
+            <div class="breadCrumb">
+                 <a href="{:U('China/Index/index')}">首页</a>&rsaquo;联系我们
+            </div>
+            <div class="rightBotPane">
+                <h2>联系我们</h2>
+                <ul>
+                    <li>地址：{$siteInfo.site_address}</li>
+                    <li>邮编：</th><td>{$siteInfo.site_code}</li>
+                    <li>电话：</th><td>{$siteInfo.site_tel}</li>
+                    <li>邮箱</th><td>{$siteInfo.site_tel}</li>
+                     <li>电话：</th><td>{$siteInfo.site_mail}</li>
+                      <li>技术支持：</th><td>{$siteInfo.site_help}</li>
+                </ul>
+             
+                <br />
+                    <form id="contactform" method="post" action="{:U('China/Contact/message')}" enctype="multipart/form-data">               
+                    <ol>
+                        <li>
+                            <label for="name">姓名<a href="#">*</a><br>
+                            </label>
+                            <input name="name" class="text" id="name">
+                        </li>
+                        <li>
+                            <label for="label2">电话<a href="#">*</a><br>
+                            </label>
+                            <input id="tel" name="tel" class="text">
+                        </li>
+                      
+                        <li>
+                            <label for="message">留言<a href="#">*</a><br>
+                            </label>
+                            <textarea id="content" name="content" rows="6" cols="50"></textarea>
+                        </li>
+                        <li class="buttons">
+                            <input type="submit" name="imageField2" id="imageField2" value="发送信息" >
+                        </li>
+                    </ol>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="../Public/footer" />

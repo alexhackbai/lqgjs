@@ -1,0 +1,1 @@
+<?php	return array ( 0 => 'id', 1 => 'pro_name', 2 => 'cover_id', 3 => 'desc', 4 => 'home', 5 => 'content', '_autoinc' => true, '_pk' => 'id', '_type' => array ( 'id' => 'int(8) unsigned', 'pro_name' => 'varchar(80)', 'cover_id' => 'mediumint(8)', 'desc' => 'varchar(255)', 'home' => 'varchar(255)', 'content' => 'text', ), );?>

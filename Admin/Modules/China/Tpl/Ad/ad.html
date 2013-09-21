@@ -1,0 +1,25 @@
+<include file="../Public/header" />
+
+<h3>广告管理</h3>
+
+<table class="ls">
+	<tr>
+		<td colspan="5"><a href="{:U('China/Ad/adAdd')}" class="btn_s">添加</a></td>
+	</tr>
+	<tr>
+		<th width="5%">id</th><th width="20%">广告名称</th><th width="50%">链接</th><th width="15%">时间</th><th width="10%">操作</th>
+	</tr>
+	<volist name="adInfo" id="vo">
+	<tr>
+		<td>{$vo.id}</td><td>{$vo.name}</td><td>{$vo.link}</td><td>{$vo.ctime|date='Y-m-d H:i:s', ###}</td>
+		<td>
+			<a href="{:U('China/Ad/adEdit', array('id'=>$vo['id']))}">编辑</a>&nbsp;
+			<a href="{:U('China/Ad/delAd', array('id'=>$vo['id']))}">删除</a>
+		</td>
+	</tr>
+	</volist>
+</table>
+
+<div class="page mt20">{$page}</div>
+
+<include file="../Public/footer" />

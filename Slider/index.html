@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery nbsp slider Plugin Demo7  自定义按钮样式扩展</title>
+<link type="text/css" rel="stylesheet" href="./css/css.css" />
+<script type="text/javascript" src="./js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="./js/jquery.nbspSlider.1.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#slider3").nbspSlider({
+			widths:          "1004px",
+			effect:	         "fade",
+			numBtnSty:       "roundness",
+			autoplay:        1,
+			speeds:          800,
+			preNexBtnShow:   0,
+			//prevId: 		'prevBts',      // 上一张幻灯片按钮ID
+			//nextId: 		'nextBts'		// 下一张幻灯片按钮I
+		});
+	});
+</script>
+<!--[if IE 6]>
+<script type="text/javascript" src="./js/EvPng.js"></script>
+<script> EvPNG.fix('.num,.num_act,.num_hover,.square,.square_act,.square_hover,.circle,.circle_act,.circle_hover,.roundness,.roundness_act,.roundness_hover,.rectangle,.rectangle_act,.rectangle_hover');
+</script>
+<![endif]--> 
+</head>
+
+<body> 
+
+	<div id="slider3">
+		<ul>				
+			<li><a href="javascript:void(0);"><img src="./images/01.jpg" /></a></li>
+			<li><a href="javascript:void(0);"><img src="./images/02.jpg" /></a></li>
+			<li><a href="javascript:void(0);"><img src="./images/03.jpg" /></a></li>
+			<li><a href="javascript:void(0);"><img src="./images/04.jpg" /></a></li>
+			<li><a href="javascript:void(0);"><img src="./images/05.jpg" /></a></li>	
+		</ul>
+	</div>
+</body>
+</html>
+

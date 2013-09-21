@@ -1,0 +1,47 @@
+<include file="../Public/header" />
+<form method="post" action="{:U('China/Case/doCaseAdd')}" enctype="multipart/form-data">
+    <table class="form">
+        <tr>
+            <th>产品名称：</th>
+            <td>
+                <input type="text" name="data[name]" class="ipt_s" /></td>
+        </tr>
+        <tr>
+            <th>产品描述：</th>
+            <td>
+                <textarea name="data[desc]" class="text"></textarea></td>
+        </tr>
+        <tr>
+            <th>产品封面：</th>
+            <td>
+                <input type="file" name="cover" /></td>
+        </tr>
+        <tr>
+            <th>产品内容：</th>
+            <td>
+                <textarea name="data[content]" id="myEditor"></textarea>
+                <script type="text/javascript">
+                    var editor = UE.getEditor('myEditor', { initialFrameWidth: 770, initialFrameHeight: 320 });
+                </script>
+            </td>
+        </tr>
+            <tr>
+        <th>是否首页：</th>
+        <td>
+            <input type="text" name="data[status]" class="ipt_s" id="w20" value="0" />
+            <span style="color:#FF0000;">* 只有为1的时候才在首页显示</span>
+        </td>
+    </tr>
+        <tr>
+            <th>&nbsp;</th>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <th>&nbsp;</th>
+            <td>
+                <input type="submit" value="提交" class="smt_s" /></td>
+        </tr>
+    </table>
+</form>
+
+<include file="../Public/footer" />

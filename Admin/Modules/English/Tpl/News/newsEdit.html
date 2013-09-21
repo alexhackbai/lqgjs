@@ -1,0 +1,47 @@
+<include file="../Public/header" />
+<form method="post" action="{:U('English/News/doNewsEdit')}" enctype="multipart/form-data">
+<input type="hidden" name="id" value="{$newsInfo['id']}" />
+<input type="hidden" name="cover_id" value="{$newsInfo['cover_id']}" />
+<table class="form">
+	<tr>
+		<th>标题：</th><td><input type="text" name="data[title]" class="ipt_s" value="{$newsInfo['title']}" /></td>
+	</tr>
+	<tr>
+		<th>类别：</th>
+		<td>
+			<select name="data[type_id]">
+				<option value="0">-请选择-</option>
+				<volist name="typeInfo" id="vo">
+				<option value="{$vo['id']}" <eq name="vo['id']" value="$newsInfo['type_id']"> selected="selected"</eq>>{$vo.name}</option>
+				</volist>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<th>概要：</th><td><textarea name="data[desc]" class="text">{$newsInfo['desc']}</textarea></td>
+	</tr>
+	<tr>
+		<th>封面图片：</th><td><empty name="newsInfo['cover_id']">暂无图片<else /><img src="__ROOT__{$newsInfo['cover']}" height="100" /></empty></td>
+	</tr>
+	<tr>
+		<th>重新上传：</th><td><input type="file" name="cover" /></td>
+	</tr>
+	<tr>
+		<th>内容：</th>
+		<td>
+			<textarea name="data[content]" id="myEditor">{$newsInfo['content']}</textarea>
+			<script type="text/javascript">
+				var editor = UE.getEditor('myEditor',{initialFrameWidth:770, initialFrameHeight:320});
+        	</script>
+		</td>
+	</tr>
+	<tr>
+		<th>&nbsp;</th><td>&nbsp;</td>
+	</tr>
+	<tr>
+		<th>&nbsp;</th><td><input type="submit" value="提交" class="smt_s" /></td>
+	</tr>
+</table>
+</form>
+
+<include file="../Public/footer" />

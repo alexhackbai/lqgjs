@@ -1,0 +1,126 @@
+<include file="../Public/header" />
+
+<link type="text/css" rel="stylesheet" href="__ROOT__/Slider/css/css.css" />
+<script type="text/javascript" src="__ROOT__/Slider/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="__ROOT__/Slider/js/jquery.nbspSlider.1.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#slider3").nbspSlider({
+			widths:          "1004px",
+			heights:         "450px",
+			effect:	         "fade",
+			numBtnSty:       "roundness",
+			autoplay:        1,
+			speeds:          800,
+			preNexBtnShow:   0,
+			//prevId: 		'prevBts',      // 上一张幻灯片按钮ID
+			//nextId: 		'nextBts'		// 下一张幻灯片按钮I
+		});
+	});
+</script>
+<!--[if IE 6]>
+<script type="text/javascript" src="./js/EvPng.js"></script>
+<script> EvPNG.fix('.num,.num_act,.num_hover,.square,.square_act,.square_hover,.circle,.circle_act,.circle_hover,.roundness,.roundness_act,.roundness_hover,.rectangle,.rectangle_act,.rectangle_hover');
+</script>
+<![endif]-->
+
+<div class="logo_nav clearfix">
+	<div class="logo_nav_box">
+    	<div class="logo fl"><a href="{:U('Land/Index/index')}"><img src="__ROOT__/Public/Home/English/Img/logo.png" /></a></div>
+    	<div class="nav fr">
+    		<ul class="clearfix">
+        		<li><a href="{:U('Land/Index/index')}" class="current">Home</a></li>
+            	<li><a href="{:U('Land/About/index')}">About Us</a></li>
+            	<li><a href="{:U('Land/News/index')}">News</a></li>
+            	<li><a href="{:U('Land/Case/index')}">Cases</a></li>
+            	<li><a href="{:U('Land/Service/index')}">Services</a></li>
+            	<li><a href="{:U('Land/Contact/index')}">Contact Us</a></li>
+        	</ul>
+    	</div>
+    <div class="clear"></div>
+    </div>
+</div>
+
+<div class="banner">
+	<div id="slider3">
+		<ul>
+			<volist name="sliderInfo" id="vo">
+			<li><a href="{$vo['link']}" target="_blank"><img src="__ROOT__{$vo['picture']}" /></a></li>
+			</volist>
+		</ul>
+	</div>
+</div>
+
+<div class="line mt50 mb30"></div>
+
+<div class="service_box clearfix">
+	<div class="service service1 fl">
+		<volist name="sertypeInfo" id="vo">
+		<eq name="vo['id']" value="1">
+    	<h1>{$vo.pro_name}</h1>
+        <p>{$vo.home}</p>
+		</eq>
+		</volist>
+    </div>
+    
+    <div class="service service4 fl inline ml34">
+    	<volist name="sertypeInfo" id="vo">
+		<eq name="vo['id']" value="2">
+    	<h1>{$vo.pro_name}</h1>
+        <p>{$vo.home}</p>
+		</eq>
+		</volist>
+    </div>
+    
+    <div class="service service3 fl inline ml34">
+    	<volist name="sertypeInfo" id="vo">
+		<eq name="vo['id']" value="3">
+    	<h1>{$vo.pro_name}</h1>
+        <p>{$vo.home}</p>
+		</eq>
+		</volist>
+    </div>
+    
+    <div class="service service2 fr">
+    	<volist name="sertypeInfo" id="vo">
+		<eq name="vo['id']" value="4">
+    	<h1>{$vo.pro_name}</h1>
+        <p>{$vo.home}</p>
+		</eq>
+		</volist>
+    </div>
+</div>
+
+<div class="title pt50"><img src="__ROOT__/Public/Home/English/Img/case_title.png" title="our's link" /></div>
+<div class="case">
+	<ul class="clearfix">
+		<volist name="caseInfo" id="vo">
+    	<li>
+            <a href="{$vo['link']}"><img src="__ROOT__{$vo['cover']}" /></a>
+            <h4><a href="{$vo['link']}">{$vo.name}</a></h4>
+            <p>{$vo.desc}</p>
+        </li>
+		</volist>
+        <div class="clear"></div>
+    </ul>
+</div>
+
+<div class="learn mt30">
+	<div class="learn_box">
+    	<div class="learn_more fr inline" style=" margin-top:75px;"><a href="{:U('Land/About/index')}">Learn more &gt;&gt;</a></div>
+        <h2>Who we are ?</h2>
+    	<p>{$aboutInfo.desc}</p>
+    </div>
+</div>
+
+<div class="title pt50"><img src="__ROOT__/Public/Home/English/Img/link_title.png" title="our's link" /></div>
+<div class="link">
+	<ul>
+		<volist name="linkInfo" id="vo">
+    	<li><a href="{$vo['link']}"><img src="__ROOT__{$vo['picture']}" /></a></li>
+		</volist>
+        <div class="clear"></div>
+    </ul>
+</div>
+
+<include file="../Public/footer" />

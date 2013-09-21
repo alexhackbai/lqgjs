@@ -1,0 +1,24 @@
+<include file="../Public/header" />
+
+<h3>资讯分类</h3>
+
+<table class="ls">
+	<tr>
+		<td colspan="4"><a href="{:U('China/News/typeAdd')}" class="btn_s">添加</a></td>
+	</tr>
+	<tr>
+		<th width="5%">id</th><th width="25%">分类名称</th><th width="70%">操作</th>
+	</tr>
+	<volist name="typeInfo" id="vo">
+	<tr>
+		<td>{$vo.id}</td><td>{$vo.name}</td>
+		<td>
+			<a href="{:U('China/News/typeEdit', array('id'=>$vo['id']))}">编辑</a>&nbsp;
+		</td>
+	</tr>
+	</volist>
+</table>
+
+<div class="page mt20">{$page}</div>
+
+<include file="../Public/footer" />

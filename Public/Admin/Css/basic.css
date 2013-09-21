@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* CSS Document */
+/*清除网页中个标签的默认属性*/
+html { }
+*html { background-image:url(about:blank); background-attachment:fixed;}
+* { margin:0px; padding:0;}
+body { font:12px/1.75 NSimSun, SimSun, 'Microsoft YaHei', arial, Helvetica, sans-serif; color:#333333;}/*字间距letter-spacing:Xpx;*/
+sup { vertical-align:text-top;}
+sub { vertical-align:text-bottom;}
+textarea { overflow:auto;}
+table { font-size:inherit; border-collapse:collapse; border-spacing:0;}
+a:link, a:visited { text-decoration:none;}
+a:hover, a:active { text-decoration:underline; color:#f00;}
+a:focus { outline:0;}
+fieldset, img { border:0;}
+a img { border:none;}
+a:link img { border:none;}
+a:hover img { border:none;}
+ul, li { list-style:none;}
+q:before, q:after, blockquote:before, blockquote:after {content:"";}
+input { overflow:visible;}
+/*关于浮动的样式定义*/
+.clear{ clear:both; height:0px; overflow:hidden; display:block;}
+.left { float:left;}
+.right { float:right;}
+.clearfix:after { content:"."; display:block; height:0px; clear:both; visibility:hidden;}
+.clearfix { display:inline-block;}
+/* Hides from IE-mac \*/
+	* html .clearfix { height:1%;}
+.clearfix { display:block;}
+/* End hide from IE-mac */
+
+/*关于标题的定义*/
+h1, h2, h3, h4, h5, h6 { font-weight:normal;}
+/*其他通用定义*/
+.none { display:none;}
+.inline{ display:inline;}
+.block { display:block;}
+.inl-blk { display:inline-block;}
+.underline { text-decoration:underline;}
+.break-word { word-wrap:break-word;}
+.alg-cen{ text-align:center}
+.ver-mid{ vertical-align:middle;}
+.relative { position:relative;}
+.absolute { position:absolute;}
+.hidden { visibility:hidden;}
+hr { color:#ff9330;}
+.bold { font-weight:bold;}
+.normal { font-weight:normal;}
+.pointer { cursor:pointer;}
+.indent2 { text-indent:2em;}
+/*字的定义*/
+.f12 { font-size:12px;} /*12px*/
+.f14 { font-size:14px;}/*14px*/
+.f16 { font-size:16px;}/*16px*/
+.f18 { font-size:18px;}/*18px*/
+.f20 { font-size:20px;}/*20px*/
+.f24 { font-size:24px;}/*24px*/
+.f700 { font-weight:700;}
+.f400 { font-weight:400;}
+/*关于字颜色的定义*/
+.gray { color:#666666;}
+.red { color:#ff0000;}
+.black { color:#000000;}
+.white { color:#ffffff;}
+.purple { color:#ff00ff;}
+.yellow { color:#ffff00;}
+.orange { color:#ff6c00;}
+.green { color:#00ff00;}
+.blue { color:#0000ff;}
+.pink { color:#6600ff;}
+/*内边距的定义*/
+.pt{}
+/*外边距的定义*/
+.mt20{ margin-top:20px;}
+/*表单*/
+.ipt_s{ width:220px; height:18px; border:#dedede 1px solid; padding:5px;}
+.ipt_m{ width:300px; height:18px; border:#dedede 1px solid; padding:5px;}
+.ipt_b{ width:450px; height:18px; border:#dedede 1px solid; padding:5px;}
+.text{ width:450px; height:60px; border:#dedede 1px solid; font-size:12px; line-height:20px; padding:5px;}
+.smt_s{ background:url(../Img/btn_b.gif) no-repeat; width:60px; height:24px; border:none; cursor:pointer; font-size:12px; color:#FFFFFF; text-align:center; line-height:24px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

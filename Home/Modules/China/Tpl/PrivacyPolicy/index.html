@@ -1,0 +1,57 @@
+<include file="../Public/header" />
+
+<div class="indexContentPane">
+    <div class="warp clearfix">
+        <div class="leftNav left">
+             <ul>
+                <li><a href="{:U('China/About/index')}">关于我们</a></li>
+                <li><a href="{:U('China/SocialResponsibility/index')}">企业社会责任</a></li>
+                <li>
+                    <a href="#">服务</a>
+                    <ul>
+                          <volist name="serviceInfo" id="vo">
+                            <li>
+                                <a href="{$vo['link']}">{$vo.pro_name}</a>
+                            </li>
+                            </volist>
+                    </ul>
+                </li>
+                <li><a href="#">产品</a>
+                    <ul>
+                    <volist name="caseInfo" id="vo">
+                    <li>
+                        <a href="{$vo['link']}">{$vo.name}</a>
+                    </li>
+                    </volist>
+                </ul>
+                </li>
+                <li>
+                    <a href="#">项目</a>
+                    <ul>
+                         <volist name="projectInfo" id="vo">
+                            <li>
+                                <a href="{$vo['link']}">{$vo.name}</a>
+                            </li>
+                            </volist>
+                    </ul>
+                </li>
+           </ul>
+        </div>
+        <div class="rightContentPane right">
+            <img src="__ROOT__/Public/Home/China/images/subFoc.jpg" />
+            <div class="breadCrumb">
+                <a href="{:U('China/Index/index')}">首页</a>&rsaquo;私有政策
+            </div>
+            <div class="rightBotPane">
+                <h2>私有政策</h2>
+                <p><volist name="aboutLs" id="vo">
+                {$vo.content}
+                </volist>
+                 </p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<include file="../Public/footer" />

@@ -1,0 +1,39 @@
+<div class="all_news mt35">
+	<div class="news_box clearfix">
+    	<ul class="business fl">
+        	<h3 class="business mb15">Information</h3>
+			<volist name="businessInfo" id="vo">
+        	<li>·&nbsp;<a href="{$vo['link']}">{$vo.title}</a></li>
+			</volist>
+        </ul>
+        <ul class="server fl inline ml45">
+        	<h3 class="server mb15">Clipper Service</h3>
+			<volist name="serviceInfo" id="vo">
+        	<li>&gt;&nbsp;&nbsp;<a href="{$vo['link']}">{$vo.title}</a></li>
+			</volist>
+        </ul>
+        <div class="contact fr">
+        	<h3 class="contact mb10">Contact US</h3>
+        	<div class="address">Address: {$siteInfo.site_address}</div>
+            <div class="tel">{$siteInfo.site_tel}</div>
+            <div class="mail">{$siteInfo.site_mail}</div>
+            <div class="map"><a href="{:U('Land/Contact/index')}">find us in map</a></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div class="footer">
+	<div class="footer_box">
+    	<span class="fr">
+        	<a href="#"><img src="__ROOT__/Public/Home/English/Img/twitter.gif" /></a>&nbsp;
+            <a href="#"><img src="__ROOT__/Public/Home/English/Img/facebook.gif" /></a>&nbsp;
+            <a href="#"><img src="__ROOT__/Public/Home/English/Img/icon.gif" /></a>&nbsp;
+            <a href="#"><img src="__ROOT__/Public/Home/English/Img/in.gif" /></a>&nbsp;
+            <a href="#"><img src="__ROOT__/Public/Home/English/Img/rass.gif" /></a>
+        </span>
+        <span>chicea © 2013</span>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<include file="../Public/header" />
+
+<h3>客户留言</h3>
+
+<table class="ls">
+	<tr>
+		<th width="5%">id</th><th width="10%">姓名</th><th width="15%">邮箱</th><th width="45%">内容</th><th width="15%">时间</th><th width="10%">操作</th>
+	</tr>
+	<volist name="message" id="vo">
+	<tr>
+		<td>{$vo.id}</td><td>{$vo.name}</td><td>{$vo.mail}</td><td>{$vo.content}</td><td>{$vo.ctime|date='Y-m-d H:i:s', ###}</td>
+		<td><a href="{:U('Land/Contact/delMessage', array('id'=>$vo['id']))}">删除</a></td>
+	</tr>
+	</volist>
+</table>
+
+<div class="page mt20">{$page}</div>
+
+<include file="../Public/footer" />

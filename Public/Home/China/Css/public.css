@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dd,dt,dl{margin:0;padding:0;border:0;word-wrap:break-word;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+}
+body{background:#fff;color:#333;font-size:14px; margin:0px; font-family:'microsoft yahei',"Arial Narrow";}
+
+ul,ol{list-style-type:none;}
+select,input,img,select{vertical-align:middle; margin:0px ; padding:0px;
+
+}
+a{ text-decoration:none; color: #073514; transition:color linear .2s;
+    word-wrap:break-word; word-break: break-all; white-space:nowrap;
+    transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+}
+a:hover{ color: #155c7e; text-decoration: underline;}
+
+.left{ float: left;}
+.right{ float: right;}
+.clearfix{ zoom:1;}
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+a{ outline: none;}
+strong{ font-weight: bold;}
+.paddingLeft{ padding-left:10px;}
+.displayNone{ display:none;}
+.displayBlock{ display:block}
+.marginBtm9{ margin-bottom: 9px;}
+.marginTop4{ margin-top: 4px;}

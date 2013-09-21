@@ -1,0 +1,33 @@
+<include file="../Public/header" />
+<form method="post" action="{:U('English/Ad/doAdAdd')}" enctype="multipart/form-data">
+<table class="form">
+	<tr>
+		<th>广告名称：</th><td><input type="text" name="data[name]" class="ipt_m" /></td>
+	</tr>
+	<tr>
+		<th>广告位置：</th>
+		<td>
+			<select name="data[type_id]">
+				<option value="0">-请选择-</option>
+				<volist name="adTypeInfo" id="vo">
+				<option value="{$vo['id']}">{$vo.name}</option>
+				</volist>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<th>广告链接：</th><td><input type="text" name="data[link]" class="ipt_m" /></td>
+	</tr>
+	<tr>
+		<th>上传封面：</th><td><input type="file" name="cover" /></td>
+	</tr>
+	<tr>
+		<th>&nbsp;</th><td>&nbsp;</td>
+	</tr>
+	<tr>
+		<th>&nbsp;</th><td><input type="submit" value="提交" class="smt_s" /></td>
+	</tr>
+</table>
+</form>
+
+<include file="../Public/footer" />

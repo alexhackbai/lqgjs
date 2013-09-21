@@ -1,0 +1,66 @@
+<include file="../Public/header" />
+
+<div class="logo_nav clearfix">
+	<div class="logo_nav_box">
+    	<div class="logo fl"><a href="{:U('Land/Index/index')}"><img src="__ROOT__/Public/Home/English/Img/logo.png" /></a></div>
+    	<div class="nav fr">
+    		<ul class="clearfix">
+        		<li><a href="{:U('Land/Index/index')}">Home</a></li>
+            	<li><a href="{:U('Land/About/index')}">About Us</a></li>
+            	<li><a href="{:U('Land/News/index')}">News</a></li>
+            	<li><a href="{:U('Land/Case/index')}">Cases</a></li>
+            	<li><a href="{:U('Land/Service/index')}" class="current">Services</a></li>
+            	<li><a href="{:U('Land/Contact/index')}">Contact Us</a></li>
+        	</ul>
+    	</div>
+    <div class="clear"></div>
+    </div>
+</div>
+
+<div class="sub_banner">
+	<h2>OUR <span style="color:#ff6700">SERVICES</span></h2>
+</div>
+
+<div class="main clearfix">
+	<h3 class="tit pt15 pb10">OUR SERVICES</h3>
+    <div class="ser_pro">
+    	<ul class="clearfix pt25">
+			<volist name="bandsInfo" id="vo">
+        	<li class="clearfix">
+            	<div class="ic fl">{$vo.id}</div>
+                <div class="info fr">
+                	<h4><a href="{$vo['link']}">{$vo.pro_name}</a></h4>
+                    <p class="pb10">{$vo.home}</p>
+                    <div class="text pt10">{$vo.desc}</div>
+                </div>
+                <div class="clear"></div>
+            </li>
+			</volist>
+            <div class="clear"></div>
+        </ul>
+    </div>
+    <div class="clearfix mt30">
+    	<div class="w460 fl">
+        	<h3 class="tit pt15 pb10">Our Partners</h3>
+            <ul class="friend clearfix pt10">
+				<volist name="linkInfo" id="vo">
+            	<li><a href="{$vo['link']}"><img src="__ROOT__{$vo['picture']}" /></a></li>
+                </volist>
+                <div class="clear"></div>
+            </ul>
+        </div>
+        <div class="w460 fr">
+        	<h3 class="tit pt15 pb10">Hot Cases</h3>
+            <div class="work">
+            	<ul class="clearfix pt25">
+					<volist name="hotCase" id="vo">
+                	<li><a href="{$vo['link']}"><img src="__ROOT__{$vo['cover']}" /></a></li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<include file="../Public/footer" />

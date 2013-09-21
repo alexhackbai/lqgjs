@@ -1,0 +1,143 @@
+<include file="../Public/header" />
+
+<!-- <div class="logo_nav clearfix">
+	<div class="logo fl"><a href="{:U('China/Index/index')}"><img src="__ROOT__/Public/Home/China/Img/logo.png" /></a></div>
+    <div class="nav fr">
+    	<ul class="clearfix">
+        	<li><a href="{:U('China/Index/index')}" class="current">首页</a></li>
+            <li><a href="{:U('China/About/index')}">关于我们</a></li>
+            <li><a href="{:U('China/News/index')}">奇嘉动态</a></li>
+            <li><a href="{:U('China/Case/index')}">案例展示</a></li>
+            <li><a href="{:U('China/Service/index')}">品牌服务</a></li>
+            <li><a href="{:U('China/Contact/index')}">联系方式</a></li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div class="banner">
+	<div id="slider3">
+		<ul>
+			<volist name="sliderInfo" id="vo">
+			<li><a href="{$vo['link']}"><img src="__ROOT__{$vo['picture']}" /></a></li>
+			</volist>
+		</ul>
+	</div>
+</div>
+<div style=" height:50px;"></div>
+
+<div class="about_top"></div>
+<div class="about clearfix">
+	<div class="about_more fr inline mt35"><a href="{:U('China/About/index')}">了解更多&gt;&gt;</a></div>
+	<h2>WELCOME TO <span>CHICEA</span></h2>
+    <p>{$aboutInfo['desc']}</p>
+</div>
+<div class="about_bottom"></div>
+
+<div class="line mt20 mb30"></div>
+
+<div class="service_box clearfix">
+	<div class="service fl">
+    	<h1>{$sertypeInfo[0]['pro_name']}</h1>
+        <p>{$sertypeInfo[0]['home']}</p>
+    </div>
+    
+    <div class="service fl inline ml34">
+    	<h1>{$sertypeInfo[1]['pro_name']}</h1>
+        <p>{$sertypeInfo[1]['home']}</p>
+    </div>
+    
+    <div class="service fl inline ml34">
+    	<h1>{$sertypeInfo[2]['pro_name']}</h1>
+        <p>{$sertypeInfo[2]['home']}</p>
+    </div>
+    
+    <div class="service fr">
+    	<h1>{$sertypeInfo[3]['pro_name']}</h1>
+        <p>{$sertypeInfo[3]['home']}</p>
+    </div>
+</div>
+
+<div class="line mt45 mb15"></div>
+
+<div class="title"><img src="__ROOT__/Public/Home/China/Img/case.png" title="我们的案例/our case" /></div>
+<div class="case">
+	<ul class="clearfix">
+		<volist name="caseInfo" id="vo">
+    	<li>
+        	<div>
+            	<a href="{$vo['link']}"><img src="__ROOT__{$vo['cover']}" /></a>
+            	<h4><a href="{$vo['link']}">{$vo.name}</a></h4>
+                <p>{$vo.desc}</p>
+            </div>
+        </li>
+		</volist>
+        <div class="clear"></div>
+    </ul>
+</div>
+
+<div class="line mt45 mb15"></div>
+
+<div class="title"><img src="__ROOT__/Public/Home/China/Img/link.png" title="合作火伴/our link" /></div>
+<div class="link">
+	<ul>
+		<volist name="linkInfo" id="vo">
+    	<li><a href="{$vo['link']}"><img src="__ROOT__{$vo['picture']}" /></a></li>
+		</volist>
+        <div class="clear"></div>
+    </ul>
+</div> -->
+<div class="indexContentPane">
+    <div class="warp clearfix">
+        <div class="leftNav left">
+            <ul>
+                <li><a href="{:U('China/About/index')}">关于我们</a></li>
+                <li><a href="{:U('China/SocialResponsibility/index')}">企业社会责任</a></li>
+                <li>
+                    <a href="#">服务</a>
+                    <ul>
+                          <volist name="serviceInfo" id="vo">
+                            <li>
+                                <a href="{$vo['link']}">{$vo.pro_name}</a>
+                            </li>
+                            </volist>
+                    </ul>
+                </li>
+                <li><a href="#">产品</a>
+                    <ul>
+                    <volist name="caseInfo" id="vo">
+                    <li>
+                        <a href="{$vo['link']}">{$vo.name}</a>
+                    </li>
+                    </volist>
+                </ul>
+                </li>
+                <li>
+                    <a href="#">项目</a>
+                    <ul>
+                         <volist name="projectInfo" id="vo">
+                            <li>
+                                <a href="{$vo['link']}">{$vo.name}</a>
+                            </li>
+                            </volist>
+                    </ul>
+                </li>
+           </ul>
+        </div>
+        <div class="rightContentPane right">
+            <div id="abgneBlock">
+                <ul class="list">
+                    <volist name="sliderInfo" id="vo">
+            <li><a href="{$vo['link']}" target="_blank"><img src="__ROOT__{$vo['picture']}" /></a></li>
+            </volist>
+                   
+                </ul>
+            </div>
+            <div class="rightBotPane">
+                <h2>企业社会责任</h2>
+                <p>{$socialRe['desc']}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="../Public/footer" />

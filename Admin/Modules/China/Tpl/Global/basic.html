@@ -1,0 +1,40 @@
+<include file="../Public/header" />
+<form method="post" action="{:U('China/Global/doBasic')}" enctype="multipart/form-data">
+<table class="form">
+	<tr>
+		<th>网站名称：</th><td><input type="text" name="data[site_name]" class="ipt_s" value="{$siteInfo['site_name']}" /></td>
+	</tr>
+	<tr>
+		<th>网站标题：</th><td><input type="text" name="data[site_title]" class="ipt_m" value="{$siteInfo['site_title']}" /></td>
+	</tr>
+	<tr>
+		<th>网站关键词：</th><td><input type="text" name="data[site_kwd]" class="ipt_b" value="{$siteInfo['site_kwd']}" /></td>
+	</tr>
+	<tr>
+		<th>网站描述：</th><td><textarea name="data[site_desc]" class="text">{$siteInfo['site_desc']}</textarea></td>
+	</tr>
+	<tr>
+		<th>地址：</th><td><input type="text" name="data[site_address]" class="ipt_b" value="{$siteInfo['site_address']}" /></td>
+	</tr>
+	<tr>
+		<th>联系电话：</th><td><input type="text" name="data[site_tel]" class="ipt_s" value="{$siteInfo['site_tel']}" /></td>
+	</tr>
+	<tr>
+		<th>管理员邮箱：</th><td><input type="text" name="data[site_mail]" class="ipt_s" value="{$siteInfo['site_mail']}" /></td>
+	</tr>
+	<tr>
+		<th>邮编：</th><td><input type="text" name="data[site_code]" class="ipt_s" value="{$siteInfo['site_code']}" /></td>
+	</tr>
+	<tr>
+		<th>技术支持：</th><td><input type="text" name="data[site_help]" class="ipt_s" value="{$siteInfo['site_help']}" /></td>
+	</tr>
+	<tr>
+		<th>版权声明：</th><td><input type="text" name="data[site_right]" class="ipt_s" value="{$siteInfo['site_right']}" /></td>
+	</tr>
+	<tr>
+		<th>&nbsp;</th><td><input type="submit" value="提交" class="smt_s" /></td>
+	</tr>
+</table>
+</form>
+
+<include file="../Public/footer" />
